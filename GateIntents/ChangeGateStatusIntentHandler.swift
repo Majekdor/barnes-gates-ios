@@ -17,20 +17,14 @@ class ChangeGateStatusIntentHandler: INExtension, ChangeGateStatusIntentHandling
             response = ChangeGateStatusIntentResponse(code: .failure, userActivity: nil)
         case .main:
             Task {
-                await sendCommand(
-                    command: "main_gate_relay_1",
-                    argument: "1\(intent.status == 0 ? "off" : "on")"
-                )
+                await setGateState(gate: "main", open: intent.status != 0)
             }
             response = ChangeGateStatusIntentResponse(code: .success, userActivity: nil)
             response.status = intent.status
             response.gate = intent.gate
         case .clubhouse:
             Task {
-                await sendCommand(
-                    command: "clubhouse_gate_relay_1",
-                    argument: "1\(intent.status == 0 ? "off" : "on")"
-                )
+                await setGateState(gate: "clubhouse", open: intent.status != 0)
             }
             response = ChangeGateStatusIntentResponse(code: .success, userActivity: nil)
             response.status = intent.status
@@ -59,22 +53,28 @@ class ChangeGateStatusIntentHandler: INExtension, ChangeGateStatusIntentHandling
         completion(result)
     }
     
-    /// Send a command to the cloud.
-    /// - `command`: The command to send
-    /// - `argument`: An argument to send with the command
-    func sendCommand(command: String, argument: String) async {
-        let url = URL(string: "https://api.particle.io/v1/devices/events")!
-        
+    /// Open or close a gate via the backend, using the signed-in credentials
+    /// shared with the main app through the app group.
+    /// - `gate`: The backend gate identifier ("main" or "clubhouse")
+    /// - `open`: Whether the gate should be opened or closed
+    func setGateState(gate: String, open: Bool) async {
+        guard let defaults = UserDefaults(suiteName: "group.gateapp"),
+              let username = defaults.string(forKey: "username"),
+              let pin = defaults.string(forKey: "pin") else {
+            print("No signed-in credentials available in the shared app group.")
+            return
+        }
+
+        let url = URL(string: "\(Constants.BASE_URL)/gates/\(gate)/\(open ? "open" : "close")")!
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue(UserDefaults(suiteName: "group.gateapp")?.string(forKey: "authorizationHeader"), forHTTPHeaderField: "Authorization")
-        
-        let parameters: [String: Any] = [
-            "name": command,
-            "data": argument
-        ]
-        request.httpBody = parameters.percentEncoded()
-        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONSerialization.data(withJSONObject: [
+            "username": username,
+            "pin": pin
+        ])
+
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
             print(String(data: data, encoding: .utf8) ?? "Unable to unwrap data response.")

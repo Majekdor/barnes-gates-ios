@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		4569D2EA293D7C5600FCACFC /* EventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 4569D2E9293D7C5600FCACFC /* EventSource */; };
 		458C1162293D58550015474C /* GateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1161293D58550015474C /* GateApp.swift */; };
-		458C1164293D58550015474C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1163293D58550015474C /* ContentView.swift */; };
+		458C1164293D58550015474C /* ControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1163293D58550015474C /* ControlPanel.swift */; };
 		458C1166293D585B0015474C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C1165293D585B0015474C /* Assets.xcassets */; };
 		458C1169293D585B0015474C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C1168293D585B0015474C /* Preview Assets.xcassets */; };
 		458C1189293D5A950015474C /* GateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1188293D5A950015474C /* GateInfoView.swift */; };
 		458C118B293D5B5F0015474C /* GateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118A293D5B5F0015474C /* GateModel.swift */; };
 		458C118D293D5C6F0015474C /* GateAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118C293D5C6F0015474C /* GateAppViewModel.swift */; };
-		458C118F293D5FBE0015474C /* SettingsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118E293D5FBE0015474C /* SettingsSheetView.swift */; };
+		458C118F293D5FBE0015474C /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118E293D5FBE0015474C /* SettingsSheet.swift */; };
 		459687BF295E9B9B00E81B4F /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459687BE295E9B9B00E81B4F /* Intents.framework */; };
 		459687C2295E9B9B00E81B4F /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459687C1295E9B9B00E81B4F /* IntentHandler.swift */; };
 		459687C6295E9B9B00E81B4F /* GateIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 459687BD295E9B9B00E81B4F /* GateIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -23,7 +23,16 @@
 		459687CC295E9DCD00E81B4F /* ChangeGateStatusIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459687CB295E9DCD00E81B4F /* ChangeGateStatusIntentHandler.swift */; };
 		459687CD295E9EC400E81B4F /* ChangeGateStatus.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 459687B1295E8EE800E81B4F /* ChangeGateStatus.intentdefinition */; };
 		45AA193A295F8F1900BA1CC1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7471C294E4BFF00F9F649 /* Extensions.swift */; };
+		45B7DF933006A65100607071 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7DF923006A65100607071 /* Constants.swift */; };
+		45B7DF943006A65100607071 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7DF923006A65100607071 /* Constants.swift */; };
 		45C7471D294E4BFF00F9F649 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7471C294E4BFF00F9F649 /* Extensions.swift */; };
+		45D6B2362B0715A70008C1F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B2352B0715A70008C1F4 /* ContentView.swift */; };
+		45D6B23C2B07169B0008C1F4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B23B2B07169B0008C1F4 /* Models.swift */; };
+		45D6B23E2B0718260008C1F4 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B23D2B0718260008C1F4 /* SignInView.swift */; };
+		45D6B2412B071B960008C1F4 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B2402B071B960008C1F4 /* Api.swift */; };
+		45D6B2432B071BCB0008C1F4 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B2422B071BCB0008C1F4 /* ApiError.swift */; };
+		45D6B2452B0733CD0008C1F4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B2442B0733CD0008C1F4 /* CardView.swift */; };
+		45D6B2472B07343E0008C1F4 /* ModifyUserSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D6B2462B07343E0008C1F4 /* ModifyUserSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,14 +62,14 @@
 /* Begin PBXFileReference section */
 		458C115E293D58550015474C /* GateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458C1161293D58550015474C /* GateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateApp.swift; sourceTree = "<group>"; };
-		458C1163293D58550015474C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		458C1163293D58550015474C /* ControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanel.swift; sourceTree = "<group>"; };
 		458C1165293D585B0015474C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458C1168293D585B0015474C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		458C1177293D58C70015474C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		458C1188293D5A950015474C /* GateInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateInfoView.swift; sourceTree = "<group>"; };
 		458C118A293D5B5F0015474C /* GateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateModel.swift; sourceTree = "<group>"; };
 		458C118C293D5C6F0015474C /* GateAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateAppViewModel.swift; sourceTree = "<group>"; };
-		458C118E293D5FBE0015474C /* SettingsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheetView.swift; sourceTree = "<group>"; };
+		458C118E293D5FBE0015474C /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
 		459687B1295E8EE800E81B4F /* ChangeGateStatus.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ChangeGateStatus.intentdefinition; sourceTree = "<group>"; };
 		459687B3295E8FB300E81B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		459687B6295E941500E81B4F /* GateApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GateApp.entitlements; sourceTree = "<group>"; };
@@ -70,7 +79,15 @@
 		459687C3295E9B9B00E81B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459687CB295E9DCD00E81B4F /* ChangeGateStatusIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeGateStatusIntentHandler.swift; sourceTree = "<group>"; };
 		45AA1927295F891A00BA1CC1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		45B7DF923006A65100607071 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45C7471C294E4BFF00F9F649 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		45D6B2352B0715A70008C1F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		45D6B23B2B07169B0008C1F4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		45D6B23D2B0718260008C1F4 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		45D6B2402B071B960008C1F4 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		45D6B2422B071BCB0008C1F4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		45D6B2442B0733CD0008C1F4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		45D6B2462B07343E0008C1F4 /* ModifyUserSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUserSheet.swift; sourceTree = "<group>"; };
 		45E5025029634339009C2CD7 /* GateIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GateIntents.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,17 +133,16 @@
 		458C1160293D58550015474C /* GateApp */ = {
 			isa = PBXGroup;
 			children = (
+				458C1161293D58550015474C /* GateApp.swift */,
 				459687B6295E941500E81B4F /* GateApp.entitlements */,
 				459687B3295E8FB300E81B4F /* Info.plist */,
-				458C1161293D58550015474C /* GateApp.swift */,
-				458C1163293D58550015474C /* ContentView.swift */,
 				458C1165293D585B0015474C /* Assets.xcassets */,
+				45D6B23F2B071B880008C1F4 /* Api */,
+				45D6B2382B0716290008C1F4 /* Model */,
+				45D6B2372B07160C0008C1F4 /* View */,
+				45D6B2392B0716480008C1F4 /* ViewModel */,
+				45D6B23A2B0716520008C1F4 /* Util */,
 				458C1167293D585B0015474C /* Preview Content */,
-				458C1188293D5A950015474C /* GateInfoView.swift */,
-				458C118A293D5B5F0015474C /* GateModel.swift */,
-				458C118C293D5C6F0015474C /* GateAppViewModel.swift */,
-				458C118E293D5FBE0015474C /* SettingsSheetView.swift */,
-				45C7471C294E4BFF00F9F649 /* Extensions.swift */,
 			);
 			path = GateApp;
 			sourceTree = "<group>";
@@ -159,6 +175,55 @@
 				459687CB295E9DCD00E81B4F /* ChangeGateStatusIntentHandler.swift */,
 			);
 			path = GateIntents;
+			sourceTree = "<group>";
+		};
+		45D6B2372B07160C0008C1F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45D6B2352B0715A70008C1F4 /* ContentView.swift */,
+				458C1163293D58550015474C /* ControlPanel.swift */,
+				458C118E293D5FBE0015474C /* SettingsSheet.swift */,
+				458C1188293D5A950015474C /* GateInfoView.swift */,
+				45D6B23D2B0718260008C1F4 /* SignInView.swift */,
+				45D6B2442B0733CD0008C1F4 /* CardView.swift */,
+				45D6B2462B07343E0008C1F4 /* ModifyUserSheet.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45D6B2382B0716290008C1F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				458C118A293D5B5F0015474C /* GateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45D6B2392B0716480008C1F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				458C118C293D5C6F0015474C /* GateAppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		45D6B23A2B0716520008C1F4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				45C7471C294E4BFF00F9F649 /* Extensions.swift */,
+				45B7DF923006A65100607071 /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		45D6B23F2B071B880008C1F4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				45D6B23B2B07169B0008C1F4 /* Models.swift */,
+				45D6B2402B071B960008C1F4 /* Api.swift */,
+				45D6B2422B071BCB0008C1F4 /* ApiError.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,13 +332,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D6B2452B0733CD0008C1F4 /* CardView.swift in Sources */,
 				459687CD295E9EC400E81B4F /* ChangeGateStatus.intentdefinition in Sources */,
 				458C118B293D5B5F0015474C /* GateModel.swift in Sources */,
-				458C1164293D58550015474C /* ContentView.swift in Sources */,
+				458C1164293D58550015474C /* ControlPanel.swift in Sources */,
 				458C118D293D5C6F0015474C /* GateAppViewModel.swift in Sources */,
 				458C1162293D58550015474C /* GateApp.swift in Sources */,
+				45D6B2362B0715A70008C1F4 /* ContentView.swift in Sources */,
+				45B7DF943006A65100607071 /* Constants.swift in Sources */,
+				45D6B2412B071B960008C1F4 /* Api.swift in Sources */,
 				458C1189293D5A950015474C /* GateInfoView.swift in Sources */,
-				458C118F293D5FBE0015474C /* SettingsSheetView.swift in Sources */,
+				45D6B2472B07343E0008C1F4 /* ModifyUserSheet.swift in Sources */,
+				458C118F293D5FBE0015474C /* SettingsSheet.swift in Sources */,
+				45D6B23C2B07169B0008C1F4 /* Models.swift in Sources */,
+				45D6B23E2B0718260008C1F4 /* SignInView.swift in Sources */,
+				45D6B2432B071BCB0008C1F4 /* ApiError.swift in Sources */,
 				45C7471D294E4BFF00F9F649 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B7DF933006A65100607071 /* Constants.swift in Sources */,
 				459687CC295E9DCD00E81B4F /* ChangeGateStatusIntentHandler.swift in Sources */,
 				459687C2295E9B9B00E81B4F /* IntentHandler.swift in Sources */,
 				459687CA295E9C1600E81B4F /* ChangeGateStatus.intentdefinition in Sources */,
@@ -422,7 +496,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GateApp/GateApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"GateApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 8XQR9YKLCL;
 				ENABLE_PREVIEWS = YES;
@@ -439,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.donniebarnes.GateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -456,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GateApp/GateApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"GateApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 8XQR9YKLCL;
 				ENABLE_PREVIEWS = YES;
@@ -473,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.donniebarnes.GateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -487,7 +561,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GateIntents/GateIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 8XQR9YKLCL;
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = TARGET_IS_EXTENSION;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -500,7 +574,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.donniebarnes.GateApp.GateIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -516,7 +590,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GateIntents/GateIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 8XQR9YKLCL;
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = TARGET_IS_EXTENSION;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -529,7 +603,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.donniebarnes.GateApp.GateIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

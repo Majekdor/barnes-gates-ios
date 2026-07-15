@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GateModel {
     var displayName: String
-    var commandName: String
+    var apiName: String
     var status: GateStatus
     var skipCounter: Int
 }
